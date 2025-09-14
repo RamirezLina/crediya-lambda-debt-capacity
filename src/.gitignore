@@ -1,0 +1,22 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de build / empaquetados
+dist/
+build/
+function.zip
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración del editor/IDE
+.vscode/
+.idea/
+
+# Archivos de pruebas locales
+event.json
+.env
