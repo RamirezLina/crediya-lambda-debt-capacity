@@ -8,7 +8,7 @@ export async function sendHtmlEmail(to, html) {
     Destination: { ToAddresses: [to] },
     Message: {
       Subject: {
-        Data: CONFIG.region
+        Data: CONFIG.subject
       },
       Body: {
         Html: {
