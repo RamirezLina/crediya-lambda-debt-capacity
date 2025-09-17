@@ -7,7 +7,7 @@ export function validateDebtCapacity(capacityData) {
   const availableCapacity = calculateAvailableCapacity(maxCapacity, currentMonthlyDebt);
 
   if (monthlyAmount <= availableCapacity) {
-    const requiresReview = Number(p.principal ?? 0) > 5 * Number(p.salary ?? 0);
+    const requiresReview = Number(capacityData.totalAmount ?? 0) > 5 * Number(capacityData.baseSalary ?? 0);
     return requiresReview ? "MANUAL" : "APPROVED"
   }
   return "REJECTED";

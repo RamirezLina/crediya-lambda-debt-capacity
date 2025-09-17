@@ -5,7 +5,7 @@ const sqsClient = new SQSClient({ region: CONFIG.region || "us-east-2" });
 
 export async function sendToQueue(message) {
   try {
-    const queueUrl = CONFIG.RESULT_QUEUE_URL;
+    const queueUrl = CONFIG.queueUrl;
     if (!queueUrl) {
       throw new Error("Queue URL is required");
     }

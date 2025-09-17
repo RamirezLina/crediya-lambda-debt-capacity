@@ -1,6 +1,7 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { CONFIG } from "../config.mjs";
 
+const sesClient = new SESClient({ region: process.env.AWS_REGION || "us-east-2" });
 
 export async function sendHtmlEmail(to, html) {
   const params = {
@@ -17,6 +18,6 @@ export async function sendHtmlEmail(to, html) {
       }
     }
   };
-  return ses.send(new SendEmailCommand(params));
+  return sesClient.send(new SendEmailCommand(params));
 }
 
